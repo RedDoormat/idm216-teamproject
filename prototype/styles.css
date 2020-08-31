@@ -142,6 +142,14 @@ Container for h3 and category horizontal scroll */
     padding-left: 27px;
     overflow-x: scroll;
 }
+.scroll.active{
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+.scroll img{
+    pointer-events: none;
+    user-select: none;
+}
 
 .thumbnail img{
     width: 180px;
@@ -490,6 +498,7 @@ h2.num {
     margin: 30px;
 }
 
+/* flex container */
 .flexgenrebtn {
     display: flex;
     flex-direction: row;
@@ -498,9 +507,24 @@ h2.num {
     margin: 20px 0em 0;
 }
 
+/* icons */
 .genrebtn #subgenreicon {
     width: 50px;
     height: 50px;
+}
+
+/* hide dark svg */
+#subiconshow {
+    display: none;
+}
+
+/* on active button, show dark svg, hide light svg */
+#subiconshow.active {
+    display: show;
+}
+
+#subgenreicon.active {
+    display: none;
 }
 
 .genrebtn {
@@ -517,6 +541,7 @@ h2.num {
     background: linear-gradient(191.53deg, #FFBF5C 5.02%, #FF9A00 91.53%);
     box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.57);
 }
+
 
 .alignitems p {
     color: white;
